@@ -1,0 +1,129 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C8E6E9"
+    android:fitsSystemWindows="false"
+    tools:context=".MainActivity" >
+
+    <EditText
+        android:id="@+id/txtNum2"
+        style="@drawable/ic_launcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl02"
+        android:layout_centerHorizontal="true"
+        android:background="#240B97"
+        android:ems="10"
+        android:fitsSystemWindows="false"
+        android:inputType="number"
+        android:textColor="#FAFAFD" />
+
+    <EditText
+        android:id="@+id/txtNum1"
+        style="@drawable/ic_launcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lbl02"
+        android:layout_below="@+id/lbl01"
+        android:background="#240B97"
+        android:ems="10"
+        android:fitsSystemWindows="false"
+        android:inputType="number"
+        android:textColor="#FAFAFD" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/lbl02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtNum2"
+        android:layout_below="@+id/txtNum1"
+        android:layout_marginTop="18dp"
+        android:text="@string/str2" />
+
+    <Button
+        android:id="@+id/cmdSuma"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtNum2"
+        android:layout_below="@+id/txtNum2"
+        android:layout_marginTop="19dp"
+        android:onClick="Sumar"
+        android:text="@string/strCmd1"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/lbl01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtNum1"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="22dp"
+        android:text="@string/str1" />
+
+    <Button
+        android:id="@+id/cmdResta"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/txtNum2"
+        android:layout_alignTop="@+id/cmdSuma"
+        android:onClick="Restar"
+        android:text="@string/strCmd2"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/cmdMulti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cmdSuma"
+        android:layout_alignRight="@+id/cmdSuma"
+        android:layout_centerVertical="true"
+        android:onClick="Multiplicar"
+        android:text="@string/strCmd3"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/cmdDivision"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cmdResta"
+        android:layout_alignRight="@+id/cmdResta"
+        android:layout_alignTop="@+id/cmdMulti"
+        android:onClick="Dividir"
+        android:text="@string/strCmd4"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/lbl04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginRight="29dp"
+        android:text="@string/str3" />
+
+    <TextView
+        android:id="@+id/lblResp"
+        android:layout_width="200dp"
+        android:layout_height="20dp"
+        android:layout_alignLeft="@+id/cmdMulti"
+        android:layout_alignRight="@+id/cmdDivision"
+        android:layout_below="@+id/cmdMulti"
+        android:layout_marginTop="39dp"
+        android:background="#196315"
+        android:textColor="#FAFAFD" />
+
+    <TextView
+        android:id="@+id/lbl03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lblResp"
+        android:layout_below="@+id/cmdMulti"
+        android:layout_marginTop="20dp"
+        android:text="@string/strR" />
+
+</RelativeLayout>
